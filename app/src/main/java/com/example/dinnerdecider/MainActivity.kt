@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
             addFoodTxt.text.clear()
             println(listOfthings)
         }
+        clrBtn.setOnClickListener{
+            println("i am working")
+        }
 
     }
 }

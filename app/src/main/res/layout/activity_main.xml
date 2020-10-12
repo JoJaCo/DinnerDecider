@@ -11,25 +11,16 @@
         android:id="@+id/selectedFoodTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/muli_bold"
         android:text="Chinese"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/addFoodTxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dd_logo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/decideBtn"
@@ -50,28 +41,47 @@
         android:id="@+id/addFoodTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="36dp"
+        android:background="@color/colorPrimary"
         android:ems="10"
         android:fontFamily="@font/muli_bold"
-        android:hint="add new food...."
+        android:hint="   add somthing to do..."
         android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryDark"
         app:layout_constraintBottom_toTopOf="@+id/addFoodBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/addFoodBtn"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="228dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="184dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/muli_bold"
         android:text="ADD FOOD"
         android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/decideBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="450dp" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clrBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/muli_bold"
+        android:text="Clear"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/decideBtn"
+        app:layout_constraintEnd_toEndOf="@+id/addFoodBtn"
+        app:layout_constraintStart_toStartOf="@+id/addFoodBtn"
+        app:layout_constraintTop_toBottomOf="@+id/addFoodBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
