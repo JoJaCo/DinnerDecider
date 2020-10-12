@@ -7,7 +7,7 @@ import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
-    val foodList = arrayListOf("Chines", "Hamburger", "Pizza", "Mcdonalds", "Barros Pizza")
+    val listOfthings = arrayListOf("watch movies", "Eat Food", "Take a walk", "Relax and chill")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,14 +15,15 @@ class MainActivity : AppCompatActivity() {
 
         decideBtn.setOnClickListener{
             val random = Random()
-            val randomFood = random.nextInt(foodList.count())
-            selectedFoodTxt.text = foodList[randomFood]
+            val randomThing = random.nextInt(listOfthings.count())
+            selectedFoodTxt.text = listOfthings[randomThing]
         }
         addFoodBtn.setOnClickListener{
             val newFood = addFoodTxt.text.toString()
-            foodList.add(newFood)
+            listOfthings.add(newFood)
             addFoodTxt.text.clear()
-            println(foodList)
+            println(listOfthings)
         }
+
     }
 }
